@@ -5,5 +5,10 @@
   <script>
     canvas = document.getElementById("Canvas");
     ctx = canvas.getContext("2d");
+    function loop() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      setInterval(loop, 100);
+    }
   </script>
 </html>
