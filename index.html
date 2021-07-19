@@ -12,6 +12,8 @@
         html.height = window.innerHeight;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        ctx.fillcolor = rgb(128, 128, 128);
+        ctx.fillrect(0, 0, canvas.width, canvas.width/8);
       }
       setInterval(loop, 1000/8);
     </script>
