@@ -3,22 +3,15 @@
   <body style="margin: 0px; width: 0px; height: 0px">
     <canvas id="canvas">
     </canvas>
-    <iframe src="https://google.com" id="search"></iframe>
     <script>
       html = document.getElementById("html");
       canvas = document.getElementById("canvas");
       ctx = canvas.getContext("2d");
-      search = document.getElementById("search");
-      searchImage = new Image();
-      searchImage.src = "textures/search.png";
       function loop() {
         html.width = window.innerWidth;
         html.height = window.innerHeight;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        search.width = canvas.width;
-        search.height = canvas.height - canvas.height/4;
-        search.style = "position: absolute; top: " + canvas.height/8;
         ctx.fillStyle = "#808080";
         ctx.fillRect(0, 0, canvas.width, canvas.height/8);
         ctx.fillRect(0, canvas.height-canvas.height/8, canvas.width, canvas.height/8);
