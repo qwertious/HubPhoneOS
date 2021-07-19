@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html id="html">
-  <body style="margin: 0px">
+  <body id="body" style="margin: 0px">
     <canvas id="canvas">
     </canvas>
     <nav class="hidden">
     </nav>
     <script>
       html = document.getElementById("html");
+      body = document.getElementById("body");
       canvas = document.getElementById("canvas");
       ctx = canvas.getContext("2d");
       function loop() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
         html.width = window.innerWidth;
         html.height = window.innerHeight;
+        body.width = window.innerWidth;
+        body.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
       }
       setInterval(loop, 1000/8);
     </script>
