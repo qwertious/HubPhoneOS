@@ -3,10 +3,12 @@
   <body style="margin: 0px; width: 0px; height: 0px">
     <canvas id="canvas">
     </canvas>
+    <iframe src="google.com" width="600" height="3200" id="search"></iframe>
     <script>
       html = document.getElementById("html");
       canvas = document.getElementById("canvas");
       ctx = canvas.getContext("2d");
+      search = document.getElementById("search");
       searchImage = new Image();
       searchImage.src = "textures/search.png";
       function loop() {
@@ -14,13 +16,25 @@
         html.height = window.innerHeight;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        search.width = canvas.width;
+        search.height = canvas.height - canvas.height/4;
+        search.style = "position: absolute; top: " + canvas.height/8;
         ctx.fillStyle = "#808080";
         ctx.fillRect(0, 0, canvas.width, canvas.height/8);
         ctx.fillRect(0, canvas.height-canvas.height/8, canvas.width, canvas.height/8);
         ctx.fillStyle = "#000000";
         ctx.fillRect(0, canvas.height-canvas.height/4, canvas.width, canvas.height/8);
+        ctx.startPath();
         ctx.drawImage(searchImage, canvas.width-canvas.width/4+canvas.width/16, canvas.height/32, canvas.width/8, canvas.height/16);
+        ctx.addHitRegion({id: "searchClick"});
+        ctx.endPath();
       }
+      canvas.addEventListener('click', function(event) {
+        if (event.reigon.id == "searchClick") {
+          
+          }
+        }
+      });
       setInterval(loop, 1000/8);
     </script>
   </body>
