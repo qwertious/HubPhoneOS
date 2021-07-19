@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <canvas id="Canvas">
-  </canvas>
-  <nav class="hidden">
-  </nav>
-  <script>
-    canvas = document.getElementById("Canvas");
-    ctx = canvas.getContext("2d");
-    function loop() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    setInterval(loop, 1000/8);
+  <body>
+   <canvas id="Canvas">
+   </canvas>
+    <nav class="hidden">
+    </nav>
+    <script>
+     canvas = document.getElementById("Canvas");
+      ctx = canvas.getContext("2d");
+      function loop() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      setInterval(loop, 1000/8);
+     </body>
   </script>
 </html>
