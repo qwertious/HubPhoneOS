@@ -12,9 +12,11 @@
         html.height = window.innerHeight;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        ctx.fillStyle = "#808080"
+        ctx.fillStyle = "#808080";
         ctx.fillRect(0, 0, canvas.width, canvas.height/8);
         ctx.fillRect(0, canvas.height-canvas.height/8, canvas.width, canvas.height/8);
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(0, canvas.height-canvas.height/4, canvas.width, canvas.height/8);
       }
       setInterval(loop, 1000/8);
     </script>
